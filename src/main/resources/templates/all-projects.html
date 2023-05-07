@@ -10,7 +10,7 @@
             <td><h1>My Projects</h1></td>
         </tr>
         <tr th:each="project: ${projects}">
-            <td><a href="error" th:href="@{${project.github}}" th:text="${project.name}">Default</a></td>
+            <td><a href="error" th:href="@{/all-projects/{name}(name=${project.name.toLowerCase()})}" th:text="${project.name}">Default</a></td>
         </tr>
     </table>
 

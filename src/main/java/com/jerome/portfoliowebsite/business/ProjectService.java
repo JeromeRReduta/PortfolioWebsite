@@ -4,9 +4,7 @@ import com.jerome.portfoliowebsite.data.Project;
 import com.jerome.portfoliowebsite.data.ProjectRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ProjectService {
@@ -23,6 +21,17 @@ public class ProjectService {
         );
         projects.sort(Comparator.comparing(Project::getName));
         return projects;
+    }
+
+    public Project getProjectNamed(String name) {
+        Map<String, Project> projects = new HashMap();
+        List<Project> searchResults = new ArrayList<>(
+                this.projectRepository.findAll()
+        );
+        searchResults.forEach( project ->
+            projects.put(project.getName(), project)
+        );
+        return projects.get(name);
     }
 
 
