@@ -31,12 +31,6 @@ public class ProjectController {
         return getProject(portfolio, model);
     }
 
-    @GetMapping("/java follow-along")
-    public String getJavaFollowAlong(Model model) {
-        Project javaFollowAlong = this.projectService.getProjectNamed("Java Follow-Along");
-        return getProject(javaFollowAlong, model);
-    }
-
     private String getProject(Project project, Model model) {
         model.addAttribute("project", project);
         return "project-template";
