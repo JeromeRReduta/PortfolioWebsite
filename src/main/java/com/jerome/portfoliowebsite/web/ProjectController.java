@@ -31,6 +31,12 @@ public class ProjectController {
         return getProject(portfolio, model);
     }
 
+    @GetMapping("os project refactor")
+    public String getOSProject(Model model) {
+        Project os = this.projectService.getProjectNamed("OS Project Refactor");
+        return getProject(os, model);
+    }
+
     private String getProject(Project project, Model model) {
         model.addAttribute("project", project);
         return "project-template";
