@@ -19,7 +19,8 @@ public class ProjectService {
         List<Project> projects = new ArrayList<>(
                 this.projectRepository.findAll()
         );
-        projects.sort(Comparator.comparing(Project::getName));
+        Comparator<Project> newestToOldest = Comparator.comparing(Project::getId).reversed();
+        projects.sort(newestToOldest);
         return projects;
     }
 

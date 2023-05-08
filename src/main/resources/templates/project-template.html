@@ -6,7 +6,12 @@
 </head>
 <body>
     <p th:text="${project.name}">Name</p>
-    <p th:text="${'Check it out here: ' + project.github}">Github</p>
+    <table>
+        <tr>
+            <td th:text="${'Check it out here: '}">Default</td>
+            <td><a href="error" th:href="@{${project.github}}" th:text="${project.github}">Default</a></td>
+        </tr>
+    </table>
     <p th:text="${project.summary}">Summary</p>
     <p th:text="${'Skills used: ' + project.skillsUsed}">Skills Used</p>
 </body>
