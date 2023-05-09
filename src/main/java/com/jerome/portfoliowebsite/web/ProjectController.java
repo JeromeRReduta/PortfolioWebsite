@@ -31,10 +31,16 @@ public class ProjectController {
         return getProject(portfolio, model);
     }
 
-    @GetMapping("os project refactor")
-    public String getOSProject(Model model) {
-        Project os = this.projectService.getProjectNamed("OS Project Refactor");
-        return getProject(os, model);
+    @GetMapping("top v2")
+    public String getTopV2(Model model) {
+        Project topV2 = this.projectService.getProjectNamed("Top v2");
+        return getProject(topV2, model);
+    }
+
+    @GetMapping("search engine")
+    public String getSearchEngine(Model model) {
+        Project searchEngine = this.projectService.getProjectNamed("Search Engine");
+        return getProject(searchEngine, model);
     }
 
     private String getProject(Project project, Model model) {
