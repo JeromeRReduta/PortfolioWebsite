@@ -25,6 +25,8 @@ public class ProjectController {
         model.addAttribute("projects", projects);
         return "all-projects";
     }
+
+
     @GetMapping("/portfolio")
     public String getPortfolio(Model model) {
         Project portfolio = this.projectService.getProjectNamed("Portfolio");
