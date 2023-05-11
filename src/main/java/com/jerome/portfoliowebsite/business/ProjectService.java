@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+/* Service in charge of anything involving projects */
 @Service
 public class ProjectService {
 

@@ -2,6 +2,7 @@ package com.jerome.portfoliowebsite.data;
 
 import javax.persistence.*;
 
+/* Representation of a project */
 @Entity
 @Table(name = "PROJECT")
 public class Project {

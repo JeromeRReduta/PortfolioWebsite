@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/* Controller in charge of all project pages, including all-projects and each individual project template */
 @Controller
 @RequestMapping("/all-projects")
 public class ProjectController {
