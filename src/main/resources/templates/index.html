@@ -5,11 +5,13 @@
     <title>Welcome</title>
 </head>
 <body>
-    <div th:replace="fragments/import-bootstrap :: imports"></div>
-    <div th:replace="fragments/navigation :: navbar"></div>
-    <div>Hi, I’m Jerome!</div>
-    <div>I’m a software developer from the Bay Area. I graduated from USF as a Computer Science-English double major. My dream is to craft simple, beautiful things.</div>
-    <div>I specialize in Java but am open to just about anything – web, full-stack, back-end, games, you name it and we’ll see where we can go from there.</div>
-    <div>Check me out through the navbar!</div>
+<div th:replace="fragments/import-style :: style"></div>
+<div th:replace="fragments/navigation :: navbar"></div>
+<p>Hi, I’m Jerome!</p>
+<p>I’m a software developer from the Bay Area. I graduated from USF as a Computer Science-English double major. My dream
+    is to craft simple, beautiful things.</p>
+<p>I specialize in Java but am open to just about anything – web, full-stack, back-end, games, you name it and we’ll see
+    where we can go from there.</p>
+<p>Check me out through the navbar!</p>
 </body>
 </html>
