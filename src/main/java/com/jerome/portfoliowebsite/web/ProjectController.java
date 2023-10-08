@@ -30,23 +30,41 @@ public class ProjectController {
 
     @GetMapping("/portfolio")
     public String getPortfolio(Model model) {
-        Project portfolio = this.projectService.getProjectNamed("Portfolio");
-        return getProject(portfolio, model);
+        return getProject("Portfolio" ,model);
     }
 
     @GetMapping("top v2")
     public String getTopV2(Model model) {
-        Project topV2 = this.projectService.getProjectNamed("Top v2");
-        return getProject(topV2, model);
+        return getProject("Top v2" ,model);
     }
 
     @GetMapping("search engine")
     public String getSearchEngine(Model model) {
-        Project searchEngine = this.projectService.getProjectNamed("Search Engine");
-        return getProject(searchEngine, model);
+        return getProject("Search Engine" ,model);
     }
 
-    private String getProject(Project project, Model model) {
+    @GetMapping("search engine mvc")
+    public String getSearchEngineMVC(Model model) {
+        return getProject("Search Engine MVC" ,model);
+    }
+
+    @GetMapping("react tic-tac-toe")
+    public String getReactTicTacToe(Model model) {
+        return getProject("React Tic-Tac-Toe" ,model);
+    }
+
+    @GetMapping("calculator with logs")
+    public String getCalculatorWithLogs(Model model) {
+        return getProject("Calculator With Logs", model);
+    }
+
+    @GetMapping("bank app")
+    public String getBankApp(Model model) {
+        return getProject("Bank App", model);
+    }
+
+    private String getProject(String name, Model model) {
+        Project project = this.projectService.getProjectNamed(name);
         model.addAttribute("project", project);
         return "project-template";
     }
